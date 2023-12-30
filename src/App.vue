@@ -4,10 +4,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import router from './router'
+// import router from './router'
 
-onMounted(() => {
-  router.push('/dashboard')
-})
+// onMounted(() => {
+//   router.push('/dashboard')
+// })
   //
 </script>

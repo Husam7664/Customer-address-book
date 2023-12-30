@@ -9,14 +9,14 @@
         <!---Navigation -->
         <!-- ---------------------------------------------- -->
         <div>
-        <perfect-scrollbar class="scrollnavbar">
+        <!-- <perfect-scrollbar class="scrollnavbar"> -->
             <v-list class="pa-6">
                 <!---Menu Loop -->
                 <template v-for="(item, i) in sidebarMenu" :key="i">
                     <NavItem :item="item"  class="leftPadding" />
                 </template>
             </v-list>
-        </perfect-scrollbar>
+        <!-- </perfect-scrollbar> -->
     </div>
     </v-navigation-drawer>
 </template>

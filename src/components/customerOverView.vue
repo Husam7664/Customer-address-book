@@ -1,4 +1,5 @@
 <script setup>
+import { computed, defineProps } from 'vue'
 // assets users logo import
 import logo from '@/assets/users.svg'
 const props = defineProps({
@@ -6,10 +7,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  image: {
-    type: String,
-    required: true,
-  },
+  // image: {
+  //   type: String,
+  //   required: true,
+  // },
   stats: {
     type: String,
     required: true,
@@ -20,30 +21,20 @@ const props = defineProps({
   },
 })
 
-const isPositive = true
-// const isPositive = controlledComputed(() => props.change, () => Math.sign(props.change) === 1)
+
+const isPositive = computed(() => Math.sign(props.change) === 1)
 </script>
 
 <template>
-  <v-card>
-    <template v-slot:prepend>
-          <!-- <v-icon icon="logo" color="primary" size="100px"></v-icon> -->
-          <!-- <FontAwesomeIcon icon="fa-regular fa-users" /> -->
-        </template>
-    
-    <v-card-text class="d-flex align-center pb-4">
-        <v-avatar color="green-lighten-4" size="84">
-      <img
-        :src="logo"
-        alt="image"
-      >
-    </v-avatar>
-      <VSpacer />
-
-      <MoreBtn
-        size="x-small"
-        class="me-n3 mt-n4"
-      />
+  <!-- <v-card > -->
+    <div class="d-flex flex-row" style="max-width: 100%;">
+      <v-card-text class="d-flex align-center pb-4">
+      <v-avatar color="green-lighten-4" size="84" style="max-width: 100%;">
+        <img
+          :src="logo"
+          alt="image"
+        >
+      </v-avatar>
     </v-card-text>
 
     <v-card-text>
@@ -61,8 +52,10 @@ const isPositive = true
           size="18"
           :icon="isPositive ? 'bx-up-arrow-alt' : 'bx-down-arrow-alt'"
         />
-        {{ isPositive ? Math.abs(props.change) : props.change }}%
+        {{ isPositive ? Math.abs(props.change) : props.change }}% this month
       </span>
     </v-card-text>
-  </v-card>
+    </div>
+    
+  <!-- </v-card> -->
 </template>
