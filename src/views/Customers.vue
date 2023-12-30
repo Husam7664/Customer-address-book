@@ -77,7 +77,3 @@ setup() {
 
 }
 </script>
-
-<style>
-
-</style>

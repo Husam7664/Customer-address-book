@@ -27,7 +27,7 @@ const isPositive = computed(() => Math.sign(props.change) === 1)
 
 <template>
   <!-- <v-card > -->
-    <div class="d-flex flex-row" style="max-width: 100%;">
+    <div class="d-flex flex-wrap" style="max-width: 100%;">
       <v-card-text class="d-flex align-center pb-4">
       <v-avatar color="green-lighten-4" size="84" style="max-width: 100%;">
         <img
@@ -49,8 +49,8 @@ const isPositive = computed(() => Math.sign(props.change) === 1)
         class="d-flex align-center gap-1 text-sm"
       >
         <VIcon
-          size="18"
-          :icon="isPositive ? 'bx-up-arrow-alt' : 'bx-down-arrow-alt'"
+          size="14"
+          :icon="isPositive ? 'fa-solid fa-arrow-up' : 'fa-solid fa-arrow-down'"
         />
         {{ isPositive ? Math.abs(props.change) : props.change }}% this month
       </span>
