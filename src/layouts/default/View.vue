@@ -1,5 +1,5 @@
 <template>
-  <v-main class="bg-green-lighten-5 pt-4 pr-8">
+  <v-main class="pt-4 pr-8" style="background-color: #F9FBFF;">
     <router-view />
   </v-main>
 </template>

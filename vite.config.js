@@ -18,6 +18,7 @@ export default defineConfig({
       autoImport: true,
       styles: {
         configFile: 'src/styles/settings.scss',
+        
       },
     }),
     ViteFonts({
@@ -45,6 +46,6 @@ export default defineConfig({
     ],
   },
   server: {
-    port: 3001,
+    port: 3000,
   },
 })

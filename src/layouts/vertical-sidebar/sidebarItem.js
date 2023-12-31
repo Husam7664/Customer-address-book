@@ -37,7 +37,7 @@ const sidebarMenu = [
     {
         title: "Help",
         icon: {
-            name: "MoodHappyIcon",
+            name: "fa-regular fa-message",
         },
         to: "/help"
     },
