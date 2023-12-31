@@ -1,6 +1,5 @@
 <script setup>
 import { computed } from 'vue'
-// assets users logo import
 import logo from '@/assets/users.svg'
 const props = defineProps({
   title: {

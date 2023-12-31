@@ -14,43 +14,19 @@
     </div>
     <AddCustomer v-model="addCustomer" @addNewCustomer="addNewCustomer"/>
     <v-card class="d-flex flex-wrap justify-space-around rounded-xl customer-overview">
-      <CustomerOverView
-      v-bind="{
-                title: 'Total Customers',
-                stats: '5,423',
-                change: 16,
-              }"
-      />
-      <v-divider
-        class="ms-3"
-        inset
-        vertical
-      />
-      <CustomerOverView
-      v-bind="{
-                title: 'Members',
-                stats: '1,893',
-                change: -1, 
-              }"
-      />
-      <v-divider
-        class="ms-3"
-        inset
-        vertical
-      />
-      <CustomerOverView
-      v-bind="{
-                title: 'Active Now',
-                stats: '189',
-                change: 72.80,
-              }"
-      />
+      <template v-for="(item, i) in customerOverView" :key="i">
+        <CustomerOverView
+          v-bind="item"
+        />
+        <v-divider
+          class="ms-3"
+          inset
+          vertical
+          v-if="i !== customerOverView.length - 1"
+        />
+      </template>
     </v-card>
-
     <CustomerTable :customersList="customersList" />
-   
-
-
 </div>
 </template>
 
@@ -68,6 +44,23 @@ components: {
 },
 setup() {
     const addCustomer = ref(false)
+    const customerOverView = ref([
+      {
+        title: 'Total Customers',
+        stats: '5,423',
+        change: 16,
+      },
+      {
+        title: 'Members',
+        stats: '1,893',
+        change: -1,
+      },
+      {
+        title: 'Active Now',
+        stats: '189',
+        change: 72.80,
+      },
+    ])
     const customersList = ref([
     {
       customerName: 'John Doe',
@@ -205,8 +198,8 @@ setup() {
     return {
       addCustomer,
       addNewCustomer,
-      customersList
-
+      customersList,
+      customerOverView
     }
   }
 

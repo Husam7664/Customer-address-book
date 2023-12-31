@@ -31,7 +31,7 @@ export default {
     <!---Single Item-->
     <v-list-item
         :to="item.to"
-        active-class="white--text text--darken-4 bg-deep-purple"
+        active-class="white--text text--darken-4 bg-deep-purple-accent-3"
         rounded="lg"
         class="mb-3"
     >

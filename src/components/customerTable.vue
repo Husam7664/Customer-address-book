@@ -17,6 +17,7 @@
         bg-color="green-lighten-5"
         class="ml-auto my-auto pr-5"
         style="max-width: 225px;"
+        rounded="lg"
       />
       <div class="d-flex flex-wrap mr-4">
         <!-- // shortby dropdown here -->
