@@ -8,11 +8,15 @@
         class="d-xl-none d-lg-none"
       >
         <v-list-item
-          prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
           title="John Leider"
           nav
           class="px-2 mb-4"
         >
+          <template v-slot:prepend>
+            <div class="mt-2">
+              <Icon icon="mynaui:stop-hexagon" color="black" width="42" height="42" />
+            </div>
+          </template>
           <template v-slot:append>
             <v-btn
               variant="text"
@@ -22,7 +26,7 @@
           </template>
         </v-list-item>
 
-        <v-divider></v-divider>
+        <!-- <v-divider></v-divider> -->
 
         <v-list density="compact" nav>
           <template v-for="(item, i) in sidebarMenu" :key="i">
@@ -46,6 +50,7 @@
   import { ref, onMounted } from 'vue'
   import DefaultBar from '../Main.vue'
   import DefaultView from './View.vue'
+  import { Icon } from '@iconify/vue';
 
   const drawer = ref(true)
   const rail = ref(true)

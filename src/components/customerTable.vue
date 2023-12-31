@@ -1,6 +1,6 @@
 <template>
   <v-card class="my-8 rounded-xl cusromer-list">
-    <v-card-title class="d-flex flex-row">
+    <v-card-title class="d-flex flex-wrap">
       <div>
         <h3 class="text-h6 font-weight-bold">All Customers</h3>
         <span class="text-caption text-green">List of all customers</span>
