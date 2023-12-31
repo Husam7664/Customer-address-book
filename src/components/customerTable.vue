@@ -1,6 +1,6 @@
 <template>
-  <v-card class="mt-6 rounded-xl">
-    <v-card-title class="d-flex flex-row cusromer-list">
+  <v-card class="my-8 rounded-xl cusromer-list">
+    <v-card-title class="d-flex flex-row">
       <div>
         <h3 class="text-h6 font-weight-bold">All Customers</h3>
         <span class="text-caption text-green">List of all customers</span>
@@ -36,11 +36,10 @@
           </template>
         </v-select> -->
         <div class="d-flex flex-wrap px-4 my-3 bg-green-lighten-5" style="border-radius: 10px;">
-          <p class="text-body-2 mt-2">Sort by:</p>
+          <p class="text-body-2" style="margin-top: 9px ;">Sort by:</p>
           <select class="ml-2 text-body-2" style="border: none; outline: none;">
           <option value="Newest">Newest</option>
           <option value="Oldest">Oldest</option>
-          <option value="30">30</option>
           </select>
           <v-icon class="pl-2 mt-3" size="15">fa-solid fa-chevron-down</v-icon>
         </div>
@@ -136,7 +135,7 @@ export default {
     title: 'Customer Name',
     
   },
-  { key: 'company', title: 'Company', class: 'my-header-style' },
+  { key: 'company', title: 'Company' },
   { key: 'phoneNumber', title: 'Phone Number' },
   { key: 'email', title: 'Email' },
   { key: 'country', title: 'Country' },
@@ -184,7 +183,8 @@ export default {
 
 <style scoped>
 .cusromer-list {
-  box-shadow: none;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
 }
 
 /* .v-text-field--outline .v-input__control {
@@ -196,11 +196,4 @@ export default {
   box-shadow: none;
 } */
 
-/* .v-input {
-  height: 10px !important;
-} */
-.my-header-style {
-  background-color: #f5f5f5 !important;
-  color: #bb0c0c !important;
-}
 </style>

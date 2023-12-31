@@ -47,16 +47,19 @@ setup() {
     const customerOverView = ref([
       {
         title: 'Total Customers',
+        icon: 'solar:users-group-rounded-linear',
         stats: '5,423',
         change: 16,
       },
       {
         title: 'Members',
+        icon: 'solar:user-check-rounded-broken',
         stats: '1,893',
         change: -1,
       },
       {
         title: 'Active Now',
+        icon: 'ph:desktop-light',
         stats: '189',
         change: 72.80,
       },
@@ -208,6 +211,6 @@ setup() {
 
 <style lang="scss" scoped>
 .customer-overview {
-  box-shadow: none;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
 }
 </style>

@@ -1,19 +1,12 @@
 <template>
-  <v-row class="ml-4 mt-2">
-    <v-img
-      src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-      alt="Vuetify Logo"
-      max-height="40"
-      max-width="40"
-    ></v-img>
-    <h2>Dashboard</h2>
+  <v-row class="ml-3 mt-2">
+    <Icon icon="mynaui:stop-hexagon" color="black" width="42" height="42" />
+    <h2 class="ml-2 mt-1">Dashboard</h2>
   </v-row>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import { Icon } from '@iconify/vue';
 </script>
 
 <style>
